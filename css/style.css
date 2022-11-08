@@ -24,6 +24,11 @@ ul {
 	padding: 0;
 }
 
+svg {
+	fill: #afb1b8;
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .container {
 	margin: 0 auto;
 	width: 100%;
@@ -37,12 +42,14 @@ ul {
 }
 
 /* header nav*/
+
+.border-line {
+	border-bottom: 1px solid var(--header-border);
+}
 .menu {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	margin: 0 auto;
-	border-bottom: 1px solid var(--header-border);
 	background-color: var(--white);
 }
 
@@ -147,6 +154,8 @@ ul {
 	justify-content: center;
 	align-items: center;
 	margin-right: 10px;
+	fill: #757575;
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 a.link-grey {
@@ -196,6 +205,7 @@ a.link-grey {
 }
 
 .icon-Vector {
+	fill: #000;
 	width: 11px;
 	height: 11px;
 }
@@ -251,8 +261,7 @@ a.link-grey {
 	padding-right: 32px;
 	padding-bottom: 30px;
 	list-style: none;
-	--color3: #afb1b8;
-	transition: var(--color3) 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	fill: #afb1b8;
 }
 
 .social-links li {
@@ -268,8 +277,13 @@ a.link-grey {
 
 .social-links li:hover,
 .social-links li:focus {
-	--color3: var(--white);
 	background-color: var(--color-blue);
+}
+
+.social-links li:hover svg,
+.social-links li:focus svg {
+	fill: #fff;
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* main what-we-do */
@@ -298,15 +312,16 @@ a.link-grey {
 }
 
 .what-we-do-photo {
-	flex-basis: calc((100% - 60px) / 3);
+	position: relative;
 }
 
 .what-we-do-tittle {
 	position: absolute;
-	width: 370px;
-	height: 70px;
 	padding: 27px 0;
-	margin-top: -75px;
+	margin: 0 auto;
+	width: 100%;
+	left: 0;
+	bottom: 5px;
 
 	font-weight: 700;
 	font-size: 14px;
@@ -380,7 +395,10 @@ a.link-grey {
 	display: flex;
 	justify-content: space-between;
 	list-style: none;
-	--color4: #afb1b8;
+}
+
+.our-customers svg:hover {
+	fill: #2196f3;
 }
 
 .our-customers li {
@@ -394,8 +412,7 @@ a.link-grey {
 }
 
 .our-customers li:hover {
-	--color4: var(--color-blue);
-	--color2: var(--color-blue);
+	fill: var(--color-blue);
 	border-color: var(--color-blue);
 }
 
@@ -407,6 +424,7 @@ a.link-grey {
 .footer-content {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 	gap: 20px;
 	padding-top: 60px;
 	padding-bottom: 60px;
@@ -457,9 +475,9 @@ a.link-grey {
 
 /* footer join us */
 
-.footer-social {
+/* .footer-social {
 	margin-left: 70px;
-}
+} */
 
 .footer-social h3 {
 	font-weight: 700;
@@ -475,7 +493,6 @@ a.link-grey {
 	padding: 0;
 	margin: 0 auto;
 	list-style: none;
-	fill: var(--white);
 }
 
 .footer-social-links li {
@@ -494,9 +511,61 @@ a.footer-social-links {
 	display: flex;
 	align-items: center;
 }
+
+.footer-social-links svg {
+	fill: #fff;
+}
 .footer-social-links li:hover {
 	background-color: var(--color-blue);
 	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Newsletter footer */
+
+.imput-section{
+	display: flex;
+}
+
+.input-email {
+	width: 358px;
+	padding: 14px 0 14px 16px;
+	margin-right: 12px;
+	border-radius: 4px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+	color: #fff;
+	outline: none ;
+	background-color: #2F303A;
+	/* transition: 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+}
+
+.newsletter h3 {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.172;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 1);
+}
+
+.newsletter button {
+	position: relative;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	padding: 10px 15px 10px 42px;
+
+	background-color: #2196f3;
+	border-radius: 4px;
+	border-color: transparent;
+}
+.newsletter button span {
+	color: rgba(255, 255, 255, 1);
+}
+
+.newsletter button svg {
+	margin-left: 24px;
+	fill: #fff;
 }
 
 /* portfolio */
@@ -600,20 +669,21 @@ a.footer-social-links {
 
 .link:hover,
 .link:focus,
+.icon-mail:hover,
+.icon-mail:focus,
 .link-grey:hover,
 .link-grey:focus,
 .link-grey-footer:hover,
 .link-grey-footer:focus {
 	text-decoration: none;
 	color: var(--color-blue);
+	fill: #2196f3;
 	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link-grey:hover,
-.link-grey:focus {
-	--color2: var(--color-blue);
-	--color5: var(--color-blue);
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.link-grey:focus .icon-mail,
+.link-grey:hover .icon-mail {
+	fill: var(--color-blue);
 }
 
 .portfolio-buttons button:hover,
@@ -633,6 +703,8 @@ a.footer-social-links {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 	cursor: pointer;
 }
+/* Modal */
+
 /* BackDrop */
 
 .backdrop {
@@ -651,6 +723,7 @@ a.footer-social-links {
 	left: 50%;
 	width: 528px;
 	height: 581px;
+	border-radius: 4px;
 	transform: translate(-50%, -50%);
 	background-color: var(--white);
 }
@@ -665,6 +738,10 @@ a.footer-social-links {
 	background-color: #fff;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	cursor: pointer;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .is-hidden {
