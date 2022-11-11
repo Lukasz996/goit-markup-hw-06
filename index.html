@@ -439,13 +439,7 @@
                 <div class="newsletter">
                     <h3>zapisz sie do newslettera</h3>
                     <div class="imput-section">
-                        <input
-                        class="input-email"
-                        type="email"
-                        name="email"
-                        id="user_email"
-                        placeholder="E-mail"
-                      />
+                        <input class="input-email" type="email" name="email" id="user_email" placeholder="E-mail" />
                         <button type="submit">
                             <span>Zapisz się</span>
 
@@ -459,28 +453,68 @@
         </div>
     </footer>
 
+
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button type="button" class="close-btn" data-modal-close>
-                <svg class="icon icon-Vector">
+            <button class="close-btn" data-modal-close>
+                <svg class="close-icon">
                     <use href="./img/icons.svg#icon-Vector"></use>
                 </svg>
             </button>
+            <div>
+                <h2 class="modal-header">
+                    Zostaw swoje dane w formularzu poniżej
+                </h2>
 
-            <h2 class="form-header">Zostaw swoje dane w formularzu poniżej</h2>
+                <form>
+                    <div class="modal-forms-flex">
 
-            <form class="my-form">
+                        <label class="modal-label" for="user-name">Imię
+                            <span class="input-container">
 
+                                <svg class="modal-icon">
+                                    <use href="./img/icons.svg#icon-Vector-3"></use>
+                                </svg>
 
+                                <input class="modal-input" type="text" id="user-name" name="user-name" required />
+                            </span>
+                        </label>
 
-                <button type="submit" class="form-btn">Wyślij</button>
-            </form>
+                        <label class="modal-label" for="user-phone">Telefon
+                            <span class="input-container">
 
+                                <svg class="modal-icon">
+                                    <use href="./img/icons.svg#icon-Vector-4"></use>
+                                </svg>
+
+                                <input class="modal-input" type="tel" id="user-phone" name="user-phone" required />
+                            </span>
+                        </label>
+
+                        <label class="modal-label" for="user-email">Email
+                            <span class="input-container">
+
+                                <svg class="modal-icon">
+                                    <use href="./img/icons.svg#icon-Vector-5"></use>
+                                </svg>
+
+                                <input class="modal-input" type="text" id="user-email" name="user-email" required />
+                            </span>
+                        </label>
+
+                        <label for="comment" class="modal-label">Komentarz
+                            <textarea name="user-comment" id="comment" class="modal-textarea"
+                                placeholder="Wprowadź tekst"></textarea>
+                        </label>
+
+                    </div>
+
+            </div>
         </div>
+
+
+
     </div>
-
-
-
 
     <script src="./js/modal.js"></script>
 </body>
@@ -489,27 +523,4 @@
 
 </html>
 
-
-
-
-<!-- <label>
-    <p>Imię</p>
-    <input type="text" name="username" id="name" />
-</label>
-<label>
-    <label>
-        <p>Telefon</p>
-        <input type="tel" name="phone_number" />
-    </label>
-    <label>
-        <p>Email</p>
-        <input type="email" name="email">
-    </label>
-    <label>
-        <p>Komentarz</p>
-        <textarea name="feedback" rows="5" placeholder="Wprowadź tekst"></textarea>
-    </label>
-    <label>
-        <input type="checkbox" name="checkbox" value="true" />
-        <p>Oświadczam iż akceptuję Regulamin i Politykę Prywatności.</p>
-    </label> -->
+<!-- is-hidden -->
