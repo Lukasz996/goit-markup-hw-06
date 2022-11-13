@@ -476,7 +476,7 @@
                                     <use href="./img/icons.svg#icon-Vector-3"></use>
                                 </svg>
 
-                                <input class="modal-input" type="text" id="user-name" name="user-name" required />
+                                <input class="modal-input" type="text" id="user-name" name="user-name" />
                             </span>
                         </label>
 
@@ -487,7 +487,7 @@
                                     <use href="./img/icons.svg#icon-Vector-4"></use>
                                 </svg>
 
-                                <input class="modal-input" type="tel" id="user-phone" name="user-phone" required />
+                                <input class="modal-input" type="tel" id="user-phone" name="user-phone" />
                             </span>
                         </label>
 
@@ -498,7 +498,7 @@
                                     <use href="./img/icons.svg#icon-Vector-5"></use>
                                 </svg>
 
-                                <input class="modal-input" type="text" id="user-email" name="user-email" required />
+                                <input class="modal-input" type="text" id="user-email" name="user-email" />
                             </span>
                         </label>
 
@@ -506,21 +506,38 @@
                             <textarea name="user-comment" id="comment" class="modal-textarea"
                                 placeholder="Wprowadź tekst"></textarea>
                         </label>
-
                     </div>
 
+                    <div class="checkbox-container">
+                        <label for="checkbox" class="checkbox-label" />
+                       
+                            <input id="checkbox" type="checkbox" class="checkbox-input" name="regulations-acceptance"
+                                required />
+
+                            <svg class="checkbox-svg ">
+                                <use href="./img/icons.svg#icon-Vector-7"></use>
+                            </svg>
+
+                            <svg class=" icon-check">
+                                <use href="./img/icons.svg#icon-Vector-6"></use>
+                            </svg>
+                        
+                        <span class="statement">Oświadczam iż akceptuję <a href="#">Regulamin</a> i
+                            <a href="#">Politykę Prywatności</a>.
+                        </span>
+
+                        <button class="modal-btn">Wyślij</button>
+
+                    </div>
             </div>
+
+
+
         </div>
 
-
-
-    </div>
-
-    <script src="./js/modal.js"></script>
+        <script src="./js/modal.js"></script>
 </body>
 
 
 
 </html>
-
-<!-- is-hidden -->
